@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         config: 
-          - {os: macOS-latest, r: 'release', targets: 'aarch64-apple-darwin'}
+          - {os: macos-12, r: 'release', targets: 'aarch64-apple-darwin'}
           
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
