@@ -16,8 +16,14 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: macos-12/arm64
-
+    runs-on: ${{ matrix.config.os }}
+    name: ${{ matrix.config.os }} (R-${{ matrix.config.r }} target-${{ matrix.config.rust-version }})
+    strategy:
+      fail-fast: false
+      matrix:
+        config: 
+          - {os: macOS-latest, r: 'release', targets: 'aarch64-apple-darwin'}
+          
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
