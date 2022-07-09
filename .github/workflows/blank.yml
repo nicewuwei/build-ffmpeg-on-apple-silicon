@@ -23,6 +23,7 @@ jobs:
       matrix:
         config: 
           - {os: macos-12, r: 'release', arch: 'ARM64', targets: 'aarch64-apple-darwin'}
+          - {os: macOS-12, r: 'release', arch: 'ARM64', targets: 'aarch64-apple-darwin'}
           - {os: macos-12, r: 'release', arch: 'arm64', targets: 'aarch64-apple-darwin'}
           - {os: macos-12, r: 'release', arch: 'aarch64', targets: 'aarch64-apple-darwin'}
           
